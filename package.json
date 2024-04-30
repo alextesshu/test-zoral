@@ -1,0 +1,14 @@
+{
+  "name": "js-1",
+  "version": "1.0.0",
+  "description": "The solution to task 1.1 is in the file task1_1.js\r The solution to task 1.2 is in the file task1_2.js\r The solution to task 1.3 is in the file task1_3.js",
+  "main": "task1_1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^135.0.0"
+  }
+}
