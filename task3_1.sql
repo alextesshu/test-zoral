@@ -1,4 +1,4 @@
-CREATE TABLE "user" (
+CREATE TABLE user (
     id int,
     firstName varchar(255),
     lastName varchar(255),
@@ -7,12 +7,11 @@ CREATE TABLE "user" (
     deleted bit,
     country varchar(255),
     isRevokeAccess bit,
-    created date  -- Postgre SQL doesn't have "time" so I used "date" instead of "datetime"
+    created datetime
 );
 
 
-
-INSERT INTO "user" (id, "firstName", "lastName", email, "cultureID", deleted, country, "isRevokeAccess", created)
+INSERT INTO user (id, firstName, lastName, email, cultureID, deleted, country, isRevokeAccess, created)
 VALUES
 (1, 'Victor', 'Shevchenko', 'vs@gmail.com', 1033, TRUE, 'US', FALSE, '2011-04-05'),
 (2, 'Oleksandr', 'Petrenko', 'op@gmail.com', 1034, FALSE, 'UA', FALSE, '2014-05-01'),
@@ -25,13 +24,13 @@ VALUES
 
 
 
-CREATE TABLE "group" (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    created TIMESTAMP
+CREATE TABLE `group` (
+    id int,
+    name varchar(255),
+    created datetime
 );
 
-INSERT INTO "group" (id, name, created)
+INSERT INTO `group` (id, name, created)
 VALUES
 (10, 'Support', '2010-02-02'),
 (12, 'Dev team', '2010-02-03'),
@@ -41,14 +40,14 @@ VALUES
 (16, 'TEST-QA-team', '2014-02-02'),
 (17, 'TEST-team', '2011-01-07');
 
-CREATE TABLE "groupMembership" (
-    id SERIAL PRIMARY KEY,
-    userID INT,
-    groupID INT,
-    created TIMESTAMP
+CREATE TABLE `groupMembership` (
+    id int,
+    userID int,
+    groupID int,
+    created datetime
 );
 
-INSERT INTO "groupMembership" (id, userID, groupID, created)
+INSERT INTO `groupMembership` (id, userID, groupID, created)
 VALUES
 (110, 2, 10, '2010-02-02'),
 (112, 3, 15, '2010-02-03'),
