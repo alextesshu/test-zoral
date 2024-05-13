@@ -4,4 +4,4 @@ function daysBetweenDates(date1, date2) {
   return Math.floor(Math.abs(date2 - date1) / oneDay);
 }
 
-module.exports = daysBetweenDates;
+export default daysBetweenDates;

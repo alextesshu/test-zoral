@@ -1,14 +1,15 @@
 CREATE TABLE "user" (
-    id SERIAL PRIMARY KEY,
-    "firstName" VARCHAR(255),
-    "lastName" VARCHAR(255),
-    email VARCHAR(255),
-    "cultureID" INT,
-    deleted BOOLEAN,
-    country VARCHAR(255),
-    "isRevokeAccess" BOOLEAN,
-    created TIMESTAMP
+    id int,
+    firstName varchar(255),
+    lastName varchar(255),
+    email varchar(255),
+    cultureID INT,
+    deleted bit,
+    country varchar(255),
+    isRevokeAccess bit,
+    created date  -- Postgre SQL doesn't have "time" so I used "date" instead of "datetime"
 );
+
 
 
 INSERT INTO "user" (id, "firstName", "lastName", email, "cultureID", deleted, country, "isRevokeAccess", created)

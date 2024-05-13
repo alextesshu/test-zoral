@@ -20,4 +20,4 @@ function projectObject(source, prototype) {
   return result;
 }
 
-module.exports = projectObject;
+export default projectObject;
