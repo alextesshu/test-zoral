@@ -10,4 +10,4 @@ function orderedSales(input) {
     return clonedInput; 
 }
 
-module.exports = orderedSales;
+export default orderedSales;
